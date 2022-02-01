@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    string a[5];
+    int count = 0;
+    
+    for (int i = 0; i < 5; i++) {
+        cin >> a[i];
+    }
+    
+    for (int i = 0; i < 5; i++) {
+        if (a[i].find("MOLANA") != std::string::npos || a[i].find("HAFEZ") != std::string::npos) {
+            cout << i + 1 << " ";
+            count = count + 1;
+        }
+    }
+    
+    if (count == 0){
+        cout << "NOT FOUND!";
+    }
+    return 0;
+}
